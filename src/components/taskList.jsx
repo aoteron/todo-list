@@ -1,14 +1,14 @@
 import { Task } from './task';
+import { useTasks } from '../context/TaskContext';
 
-export const TaskList = taskListPropsObj => {
-	console.log('taskListPropsObj', taskListPropsObj);
-	return (
+export const TaskList = () => {
+	const { tasks } = useTasks();
+		return (
 		<ul>
-			{taskListPropsObj.myCustomTasks.map(singleTask => (
+			{tasks.map((singleTask) => (
 				<Task
 					key={singleTask.id}
 					singleTask={singleTask}
-					handleClickComplete={taskListPropsObj.handleComplete}
 				/>
 			))}
 		</ul>

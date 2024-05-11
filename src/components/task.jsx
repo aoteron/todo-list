@@ -1,4 +1,7 @@
+import { useTasks } from "../context/TaskContext";
+
 export const Task = taskPropsObj => {
+	const { handleComplete } = useTasks();
 	return (
 		<li
 			key={taskPropsObj.singleTask.id}
@@ -11,7 +14,7 @@ export const Task = taskPropsObj => {
 			{taskPropsObj.singleTask.title}
 			<button
 				onClick={() =>
-					taskPropsObj.handleClickComplete(taskPropsObj.singleTask.id)
+					handleComplete(taskPropsObj.singleTask.id)
 				}
 			>
 				Complete
