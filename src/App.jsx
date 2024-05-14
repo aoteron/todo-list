@@ -1,13 +1,13 @@
-import { TaskList } from './components/taskList';
-import { TaskProvider } from './context/TaskContext';
+import { TaskList } from './components/taskList'
+import { TaskProvider } from './context/TaskContext'
 
 function App() {
-	return (
-		<TaskProvider>
-			<h1>TODO LIST</h1>
-			<TaskList/>
-		</TaskProvider>
-	);
+  return (
+    <TaskProvider>
+      <h1>TODO LIST</h1>
+      <TaskList />
+    </TaskProvider>
+  )
 }
 
-export default App;
+export default App
